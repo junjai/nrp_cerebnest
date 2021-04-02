@@ -10,9 +10,6 @@
     - codes
 
         python codes used for the analysis
-        - param_optimization&#46;py
-            
-            optimization of weights using grid search
         - finalAnalysis&#46;py
 
             other statistical analysis
