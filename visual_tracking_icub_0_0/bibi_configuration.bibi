@@ -2,16 +2,31 @@
   xmlns:ns1="http://schemas.humanbrainproject.eu/SP10/2014/BIBI" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ns1:brainModel>
-    <ns1:file>braitenberg.py</ns1:file>
-    <ns1:populations from="0" population="sensors" to="5" xsi:type="ns1:Range" />
-    <ns1:populations from="5" population="actors" to="8" xsi:type="ns1:Range" />
-    <ns1:populations from="0" population="record" to="8" xsi:type="ns1:Range" />
+    <ns1:file>cerebellum.py</ns1:file>
+    <ns1:populations population="record" from="0" step="1" to="280" xsi:type="ns1:Range" />
+    <ns1:populations population="mf" from="0" step="1" to="100" xsi:type="ns1:Range" />
+    <ns1:populations population="pc" from="100" step="1" to="172" xsi:type="ns1:Range" />
+    <ns1:populations population="io_p" from="172" step="1" to="208" xsi:type="ns1:Range" />
+    <ns1:populations population="io_n" from="208" step="1" to="244" xsi:type="ns1:Range" />
+    <ns1:populations population="dcn_p" from="244" step="1" to="262" xsi:type="ns1:Range" />
+    <ns1:populations population="dcn_n" from="262" step="1" to="280" xsi:type="ns1:Range" />
   </ns1:brainModel>
+  <ns1:mode>SynchronousDirectNestSimulation</ns1:mode>
+  <ns1:timestep>10</ns1:timestep>
   <ns1:bodyModel robotId="icub">icub_model/model.sdf</ns1:bodyModel>
-  <ns1:transferFunction src="all_neurons_monitor.py" xsi:type="ns1:PythonTransferFunction" />
-  <ns1:transferFunction src="set_eyepos.py" xsi:type="ns1:PythonTransferFunction" />
-  <ns1:transferFunction src="move_target.py" xsi:type="ns1:PythonTransferFunction" />
-  <ns1:transferFunction src="tf_results.py" xsi:type="ns1:PythonTransferFunction" />
-  <ns1:transferFunction src="eye_sensor_transmit.py" xsi:type="ns1:PythonTransferFunction" />
-  <ns1:transferFunction src="filter_joints_for_nice_output_on_frontend.py" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="move_target.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="csv_spike_monitor.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="set_eyepos.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="set_params.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="move_eye.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="all_neurons_monitor.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="set_eyevel.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="eye2MF.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="detect_error.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="filter_joints_for_nice_output_on_frontend.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="true_error.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="dcn_output.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="brain_params.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="error_feedback.py" active="true" xsi:type="ns1:PythonTransferFunction" />
+  <ns1:transferFunction src="record_weights.py" active="true" xsi:type="ns1:PythonTransferFunction" />
 </ns1:bibi>

@@ -1,0 +1,2 @@
+dt,frequency,amplitude,LTP1,LTD1,LTP2,LTD2,LTP3,LTD3,Simulation_reset
+0.01,1.6,0.1,0.05,-0.6,1e-05,-2e-05,1e-07,1e-06

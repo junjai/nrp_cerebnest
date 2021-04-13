@@ -48,32 +48,65 @@
           "isClosable": true,
           "reorderEnabled": true,
           "title": "",
-          "height": 75,
+          "height": 60,
           "content": [
             {
-              "type": "stack",
-              "width": 50.769230769230774,
-              "height": 100,
+              "type": "column",
               "isClosable": true,
               "reorderEnabled": true,
               "title": "",
-              "activeItemIndex": 0,
+              "width": 40.578053885252984,
               "content": [
                 {
-                  "type": "component",
-                  "title": "Environment Rendering",
-                  "id": "environment-rendering",
-                  "componentName": "angularModuleComponent",
-                  "componentState": {
-                    "module": "environmentRenderingModule",
-                    "angularDirective": "<environment-rendering />",
-                    "singleton": true
-                  },
-                  "isClosable": false,
-                  "customOptionsDirective": "<environment-rendering-options/>",
-                  "pwidth": 800,
-                  "pheight": 600,
-                  "reorderEnabled": true
+                  "type": "stack",
+                  "width": 53.608247422680414,
+                  "isClosable": true,
+                  "reorderEnabled": true,
+                  "title": "",
+                  "activeItemIndex": 0,
+                  "height": 60,
+                  "content": [
+                    {
+                      "type": "component",
+                      "title": "Environment Rendering",
+                      "id": "environment-rendering",
+                      "componentName": "angularModuleComponent",
+                      "componentState": {
+                        "module": "environmentRenderingModule",
+                        "angularDirective": "<environment-rendering />",
+                        "singleton": true
+                      },
+                      "isClosable": false,
+                      "customOptionsDirective": "<environment-rendering-options/>",
+                      "pwidth": 800,
+                      "pheight": 600,
+                      "reorderEnabled": true
+                    }
+                  ]
+                },
+                {
+                  "type": "stack",
+                  "isClosable": true,
+                  "reorderEnabled": true,
+                  "title": "",
+                  "activeItemIndex": 0,
+                  "height": 40,
+                  "content": [
+                    {
+                      "type": "component",
+                      "title": "Plotting Tool",
+                      "id": "plotting-tool",
+                      "componentName": "angularModuleComponent",
+                      "componentState": {
+                        "module": "exdFrontendApp",
+                        "angularDirective": "<plotting-tool />"
+                      },
+                      "pwidth": 800,
+                      "pheight": 400,
+                      "isClosable": true,
+                      "reorderEnabled": true
+                    }
+                  ]
                 }
               ]
             },
@@ -83,20 +116,20 @@
               "reorderEnabled": true,
               "title": "",
               "activeItemIndex": 0,
-              "width": 49.6124031007752,
+              "height": 80.40201005025126,
+              "width": 59.42194611474703,
               "content": [
                 {
                   "type": "component",
-                  "title": "Brain Editor",
-                  "id": "pynn-editor",
+                  "title": "Video Stream",
+                  "id": "video-stream",
                   "componentName": "angularModuleComponent",
                   "componentState": {
                     "module": "exdFrontendApp",
-                    "angularDirective": "<pynn-editor />",
-                    "singleton": true
+                    "angularDirective": "<video-stream />"
                   },
-                  "pwidth": 800,
-                  "pheight": 900,
+                  "pwidth": 600,
+                  "pheight": 400,
                   "isClosable": true,
                   "reorderEnabled": true
                 }
@@ -108,9 +141,8 @@
       "isClosable": true,
       "reorderEnabled": true,
       "title": "",
-      "width": 50,
       "openPopouts": [],
-      "maximisedItemId": null
+      "maximisedItemId": "__glMaximised"
     }
   }
 }
